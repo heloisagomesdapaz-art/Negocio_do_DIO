@@ -1,0 +1,22 @@
+# ============================================
+# ARQUIVO: .gitignore
+# O QUE FAZ: Diz ao Git quais arquivos e pastas
+# NÃO devem ser enviados para o GitHub.
+# ============================================
+
+# --- Ambiente virtual Python ---
+venv/
+
+# --- Arquivos de cache do Python ---
+__pycache__/
+*.pyc
+
+# --- Arquivos do sistema operacional ---
+.DS_Store
+Thumbs.db
+
+# --- Arquivos do editor/IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo

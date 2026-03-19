@@ -22,7 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # --- PASSO 3: Criar o servidor ---
 # Estamos dizendo ao Flask:
 # "Os arquivos do site (HTML, CSS, JS) estão na pasta HERE"
-app = Flask(__name__, static_folder=HERE, template_folder=HERE)
+app = Flask(__name__, static_folder=HERE, static_url_path='')
 
 
 # ============================================
