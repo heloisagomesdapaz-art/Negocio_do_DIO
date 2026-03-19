@@ -16,6 +16,7 @@ Quando o usuário digita o nome e a senha corretos, ele é redirecionado para um
 ```
 Negocio_do_DIO/
 │
+├── .gitignore          ← Arquivos que o Git deve ignorar (ex: venv/)
 ├── app.py              ← Servidor (cérebro do site)
 ├── index.html          ← Tela de login (o que o usuário vê primeiro)
 ├── dashboard.html      ← Página após o login
