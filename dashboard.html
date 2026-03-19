@@ -1,15 +1,60 @@
+<!-- ============================================
+     ARQUIVO: dashboard.html
+     O QUE FAZ: Esta é a página que aparece DEPOIS
+     do login. É a "área logada" do sistema.
+     ============================================ -->
+
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dashboard</title>
-  <style>body{display:flex;align-items:center;justify-content:center;height:100vh;margin:0;font-family:Arial,Helvetica,sans-serif;background:#f8fafc} .card{background:#fff;padding:28px;border-radius:10px;box-shadow:0 8px 24px rgba(18,38,63,.06);text-align:center}</style>
+
+  <!-- CSS direto no arquivo (inline) para manter simples -->
+  <style>
+    /* Remove margens padrão e centraliza tudo na tela */
+    body {
+      display: flex;              /* Ativa o modo flexbox (ajuda a centralizar) */
+      align-items: center;        /* Centraliza verticalmente */
+      justify-content: center;    /* Centraliza horizontalmente */
+      height: 100vh;              /* Ocupa a tela inteira (vh = viewport height) */
+      margin: 0;                  /* Remove margens do navegador */
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f8fafc;        /* Cor de fundo cinza bem clarinho */
+    }
+
+    /* Caixa branca com sombra (cartão) */
+    .card {
+      background: #fff;           /* Fundo branco */
+      padding: 28px;              /* Espaço interno */
+      border-radius: 10px;        /* Cantos arredondados */
+      box-shadow: 0 8px 24px rgba(18, 38, 63, 0.06); /* Sombra suave */
+      text-align: center;         /* Texto centralizado */
+    }
+
+    /* Estilo do link "Sair" */
+    .card a {
+      color: #2563eb;             /* Cor azul */
+      text-decoration: none;      /* Remove sublinhado */
+      font-weight: 600;           /* Texto semi-negrito */
+    }
+
+    /* Quando passa o mouse no link "Sair" */
+    .card a:hover {
+      text-decoration: underline; /* Adiciona sublinhado */
+    }
+  </style>
 </head>
+
 <body>
+  <!-- Cartão de boas-vindas -->
   <div class="card">
     <h2>Bem-vindo!</h2>
     <p>Login realizado com sucesso.</p>
+
+    <!-- Link para voltar à tela de login -->
     <a href="/">Sair</a>
   </div>
 </body>

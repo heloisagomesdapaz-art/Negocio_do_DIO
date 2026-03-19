@@ -1,10 +1,99 @@
-*{box-sizing:border-box;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
-body{background:linear-gradient(135deg,#eef2ff,#f8fafc);height:100vh;display:flex;align-items:center;justify-content:center;margin:0}
-.container{background:#fff;padding:28px;border-radius:10px;box-shadow:0 8px 24px rgba(18,38,63,.08);width:320px}
-h1{margin:0 0 18px;font-size:22px;color:#0f172a;text-align:center}
-label{display:block;margin:8px 0 6px;color:#475569;font-size:13px}
-input{width:100%;padding:10px 12px;border:1px solid #e6e9ef;border-radius:8px;font-size:14px}
-button{margin-top:16px;width:100%;padding:10px 12px;border:0;background:#2563eb;color:#fff;border-radius:8px;font-weight:600;cursor:pointer}
-.error{margin-top:12px;color:#b91c1c;font-size:13px;min-height:18px}
+/* ============================================
+   ARQUIVO: styles.css
+   O QUE FAZ: Este arquivo deixa a tela de login
+   BONITA. Ele controla cores, tamanhos, posições
+   e espaçamentos de todos os elementos da página.
+   ============================================ */
 
-@media (max-width:420px){.container{width:92%;padding:20px}}
+/* --- RESET GERAL --- */
+/* O * (asterisco) seleciona TODOS os elementos da página */
+* {
+    box-sizing: border-box;  /* Faz o padding não aumentar o tamanho dos elementos */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte padrão para todo o site */
+}
+
+/* --- CORPO DA PÁGINA --- */
+body {
+    background: linear-gradient(135deg, #eef2ff, #f8fafc); /* Fundo com degradê suave */
+    height: 100vh;              /* Ocupa a tela inteira (vh = viewport height) */
+    display: flex;              /* Ativa flexbox para centralizar */
+    align-items: center;        /* Centraliza verticalmente */
+    justify-content: center;    /* Centraliza horizontalmente */
+    margin: 0;                  /* Remove margem padrão do navegador */
+}
+
+/* --- CAIXA DO FORMULÁRIO --- */
+.container {
+    background: #fff;           /* Fundo branco */
+    padding: 28px;              /* Espaço interno (entre a borda e o conteúdo) */
+    border-radius: 10px;        /* Cantos arredondados */
+    box-shadow: 0 8px 24px rgba(18, 38, 63, 0.08); /* Sombra suave embaixo */
+    width: 320px;               /* Largura fixa */
+}
+
+/* --- TÍTULO "Entrar" --- */
+h1 {
+    margin: 0 0 18px;           /* Margem: 0 em cima, 0 dos lados, 18px embaixo */
+    font-size: 22px;            /* Tamanho da letra */
+    color: #0f172a;             /* Cor escura (quase preto) */
+    text-align: center;         /* Centralizado */
+}
+
+/* --- RÓTULOS DOS CAMPOS (Usuário, Senha) --- */
+label {
+    display: block;             /* Cada label fica em sua própria linha */
+    margin: 8px 0 6px;          /* Espaçamento: 8px em cima, 6px embaixo */
+    color: #475569;             /* Cor cinza escuro */
+    font-size: 13px;            /* Tamanho pequeno */
+}
+
+/* --- CAMPOS DE DIGITAÇÃO (input) --- */
+input {
+    width: 100%;                /* Ocupa toda a largura disponível */
+    padding: 10px 12px;         /* Espaço interno (10px vertical, 12px horizontal) */
+    border: 1px solid #e6e9ef;  /* Borda fina cinza clara */
+    border-radius: 8px;         /* Cantos arredondados */
+    font-size: 14px;            /* Tamanho da letra */
+}
+
+/* Quando o campo está selecionado (clicado) */
+input:focus {
+    outline: none;              /* Remove a borda padrão do navegador */
+    border-color: #2563eb;      /* Muda a borda para azul */
+}
+
+/* --- BOTÃO "Entrar" --- */
+button {
+    margin-top: 16px;           /* Espaço acima do botão */
+    width: 100%;                /* Ocupa toda a largura */
+    padding: 10px 12px;         /* Espaço interno */
+    border: 0;                  /* Remove borda */
+    background: #2563eb;        /* Cor de fundo azul */
+    color: #fff;                /* Texto branco */
+    border-radius: 8px;         /* Cantos arredondados */
+    font-weight: 600;           /* Texto semi-negrito */
+    font-size: 14px;            /* Tamanho da letra */
+    cursor: pointer;            /* Mãozinha ao passar o mouse */
+}
+
+/* Quando passa o mouse sobre o botão */
+button:hover {
+    background: #1d4ed8;        /* Azul um pouco mais escuro */
+}
+
+/* --- MENSAGEM DE ERRO --- */
+.error {
+    margin-top: 12px;           /* Espaço acima */
+    color: #b91c1c;             /* Cor vermelha (para chamar atenção) */
+    font-size: 13px;            /* Tamanho pequeno */
+    min-height: 18px;           /* Altura mínima (reserva espaço mesmo vazio) */
+}
+
+/* --- RESPONSIVIDADE --- */
+/* Se a tela for menor que 420px (celular), ajusta o container */
+@media (max-width: 420px) {
+    .container {
+        width: 92%;             /* Ocupa 92% da tela */
+        padding: 20px;          /* Menos espaço interno */
+    }
+}

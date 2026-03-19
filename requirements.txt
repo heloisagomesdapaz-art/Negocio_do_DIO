@@ -1,1 +1,9 @@
-Flask
+# ============================================
+# ARQUIVO: requirements.txt
+# O QUE FAZ: Lista as bibliotecas Python que o
+# projeto precisa para funcionar.
+# O comando "pip install -r requirements.txt"
+# instala tudo que está listado aqui.
+# ============================================
+
+Flask==3.1.1

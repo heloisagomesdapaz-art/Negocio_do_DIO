@@ -1,25 +1,80 @@
+<!-- ============================================
+     ARQUIVO: index.html
+     O QUE FAZ: Esta é a TELA DE LOGIN do site.
+     É a primeira página que o usuário vê.
+     Aqui ele digita o nome de usuário e a senha.
+     ============================================ -->
+
 <!doctype html>
+<!-- "doctype html" diz ao navegador: "este arquivo é HTML5" -->
+
 <html lang="pt-BR">
+<!-- lang="pt-BR" diz que o idioma da página é Português do Brasil -->
+
 <head>
+  <!-- O <head> contém informações SOBRE a página (não aparece na tela) -->
+
+  <!-- charset="utf-8" permite usar acentos e caracteres especiais -->
   <meta charset="utf-8">
+
+  <!-- Faz o site funcionar bem em celulares -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Título que aparece na aba do navegador -->
   <title>Tela de Login</title>
+
+  <!-- Link para o arquivo CSS (que deixa a página bonita) -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <!-- O <body> contém tudo que APARECE na tela -->
+
+  <!-- Container = caixa branca centralizada na tela -->
   <div class="container">
+
+    <!-- Título da página -->
     <h1>Entrar</h1>
+
+    <!-- Formulário de login -->
+    <!-- id="loginForm" = nome que o JavaScript usa para encontrar este formulário -->
     <form id="loginForm">
+
+      <!-- Campo: Nome de usuário -->
       <label for="username">Usuário</label>
-      <input id="username" name="username" type="text" autocomplete="username" required>
+      <input
+        id="username"
+        name="username"
+        type="text"
+        placeholder="Digite seu usuário"
+        autocomplete="username"
+        required
+      >
+      <!-- required = o campo é obrigatório (não pode ficar vazio) -->
 
+      <!-- Campo: Senha -->
       <label for="password">Senha</label>
-      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        placeholder="Digite sua senha"
+        autocomplete="current-password"
+        required
+      >
+      <!-- type="password" = esconde os caracteres digitados -->
 
+      <!-- Botão de enviar -->
       <button type="submit">Entrar</button>
+
+      <!-- Área para mostrar mensagens de erro -->
+      <!-- Começa vazia e o JavaScript preenche se houver erro -->
       <div id="error" class="error"></div>
+
     </form>
   </div>
+
+  <!-- Link para o arquivo JavaScript (que faz o login funcionar) -->
   <script src="script.js"></script>
 </body>
 </html>
